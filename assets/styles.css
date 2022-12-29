@@ -5,12 +5,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Background Images from Freepik, Unplash */
 body,
 html {
-  background-color: #2c365a !important;
+  background-image: url(https://images.unsplash.com/photo-1579619272436-7bf4271f0bff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1398&q=80);
+
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
-  /* background-repeat: no-repeat;
-  background-size: cover; */
   line-height: 1.2;
   width: 100%;
 }
@@ -52,13 +54,18 @@ section {
   min-height: 5em;
   padding: 60px 2%;
 }
-p{
+p {
   font-size: 1.1rem;
 }
 /* Home */
 #home {
-  padding-top: 3rem;
-  margin-top: 3rem;
+  padding-top: 4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  background-color: #ffffff1a;
+  border-radius: 20px;
 }
 /* .home {
   background-color: var(--bs-light);
@@ -89,14 +96,14 @@ p{
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
-#container-width{
+#container-width {
   width: 70%;
 }
 /* About Page*/
-.about{
+.about {
   margin-bottom: 1rem;
 }
-.about h3 span{
+.about h3 span {
   border-bottom: 2px solid teal;
 }
 .about-content {
@@ -111,15 +118,15 @@ p{
   background-color: var(--bs-light);
   box-shadow: 0 0 10px rgba(135, 135, 135, 0.3);
 }
-.about-content p{
+.about-content p {
   /* font-size: 1rem; */
   color: #656565eb;
 }
-.name a{
+.name a {
   color: rgb(0, 96, 110);
   text-decoration: none;
 }
-.name a:hover{
+.name a:hover {
   color: rgb(38, 18, 141);
   text-decoration: none;
   border-bottom: 1px solid rgb(38, 18, 141);
@@ -136,10 +143,10 @@ p{
   transition: all 0.5s ease-in;
 }
 /* How to Used Page */
-.usage-info{
+.usage-info {
   margin-bottom: 1rem;
 }
-.usage-info h3 span{
+.usage-info h3 span {
   border-bottom: 2px solid teal;
 }
 .usage-content {
@@ -153,7 +160,7 @@ p{
   background-color: var(--bs-light);
   box-shadow: 0 0 10px rgba(135, 135, 135, 0.3);
 }
-.usage-content h5{
+.usage-content h5 {
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -207,17 +214,17 @@ input {
 }
 /* Media Query */
 @media (max-width: 992px) {
-  ul{
+  ul {
     padding-top: 2rem;
     text-align: center;
   }
 }
 @media (max-width: 576px) {
-  ul{
+  ul {
     padding-top: 2rem;
     text-align: center;
   }
-  #container-width{
+  #container-width {
     width: 95%;
   }
 }
