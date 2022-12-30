@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Weather</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+
+    <!-- Boostrap CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- The video -->
+    <video autoplay muted loop id="myVideo">
+      <source
+        src="./assets/img/pexels-james-cheney-6933752.mp4"
+        type="video/mp4"/>
+    </video>
+
+    <nav class="navbar autohide navbar-expand-lg bg-light shadow" id="navbar">
+      <div class="container-fluid" data-aos="zoom-in-right">
+        <a class="navbar-brand" href="./index.html">My Weather</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          id="menu_button"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./usage-info.html"
+                >How to Used ?</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./about.html"
+                >About</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Page -->
+    <section id="home">
+      <div class="container">
+        <div
+          class="col-sm text-center"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
+          <form class="d-inline-flex" role="search">
+            <input
+              id="city"
+              class="form-control me-2"
+              type="search"
+              placeholder="Search Your City"
+              aria-label="Search"/>
+            <button
+              class="btn btn-outline-success bg-success"
+              type="submit"
+              id="submit">
+              Search
+            </button>
+          </form>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="3000">
+          <h1 class="my-4 text-center text-light">
+            Weather for <span id="cityName"></span>
+          </h1>
+        </div>
+        <main>
+          <div
+            class="row row-cols-1 row-cols-md-3 mb-3 text-center"
+            data-aos="fade-up"
+            data-aos-duration="3000">
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm border-dark">
+                <div class="card-header py-3 text-bg">
+                  <h4 class="my-0 fw-normal">Temperature</h4>
+                </div>
+                <div class="card-body temp-bg">
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Temperature <span id="temp"></span> °C</li>
+                    <li>Min Temperature <span id="min_temp"></span> °C</li>
+                    <li>Max Temperature <span id="max_temp"></span> °C</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm border-dark">
+                <div class="card-header py-3 text-bg-gray">
+                  <h4 class="my-0 fw-normal">Humidity</h4>
+                </div>
+                <div class="card-body humidity-bg">
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Humidity <span id="humidity"></span> %</li>
+                    <li>Feels like <span id="feels_like"></span> °C</li>
+                    <li>Wind Degree <span id="wind_degrees"></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm border-dark">
+                <div class="card-header py-3 text-bg-gray">
+                  <h4 class="my-0 fw-normal">Wind</h4>
+                </div>
+                <div class="card-body wind-bg">
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Wind Speed <span id="wind_speed"></span> m/sec</li>
+                    <li>Sunrise <span id="sunrise"></span></li>
+                    <li>Sunset <span id="sunset"></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <h2 class="display-6 text-center text-light mb-4">Weather of other common place</h2>
+    
+        <div class="table-responsive">
+          <table class="table text-center text-light">
+            <thead>
+              <tr>
+                <th style="width: 34%;"></th>
+                <th style="width: 22%;">Cloud_pct</th>
+                <th style="width: 22%;">Feels_like</th>
+                <th style="width: 22%;">Humidity</th>
+                <th style="width: 22%;">Max_temp</th>
+                <th style="width: 22%;">Min_temp</th>
+                <th style="width: 22%;">Sunrise</th>
+                <th style="width: 22%;">Sunset</th>
+                <th style="width: 22%;">Temp</th>
+                <th style="width: 22%;">Wind_degrees</th>
+                <th style="width: 22%;">Wind_speed</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Mumbai</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Pune</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+              </tr>
+            </tbody>
+    
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Nagpur</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Amravati</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> -->
+        </main>
+      </div>
+    </section>
+
+    <div class="data-source">
+      <p>* All data from Rapid Api Services</p>
+    </div>
+
+    <footer id="footer">
+      <div class="footer">
+        <p class="text-center" id="credit">
+          Built by <a href="https://dnyaneshkolhe.in/">Dnyanesh Kolhe</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="./assets/app.js"></script>
+
+    <!-- Boodtrap Js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
