@@ -57,7 +57,7 @@ html {
 }
 /* Section*/
 section {
-  scroll-margin-top: 110px;
+  scroll-margin-top: 60px;
   min-height: 5em;
   padding: 60px 1%;
 }
