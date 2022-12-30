@@ -8,13 +8,20 @@
 /* Background Images from Freepik, Unplash */
 body,
 html {
-  background-image: url(https://images.unsplash.com/photo-1579619272436-7bf4271f0bff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1398&q=80);
-
+  /* background-image: url(https://images.unsplash.com/photo-1579619272436-7bf4271f0bff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1398&q=80);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   color: #fff;
   line-height: 1.2;
   width: 100%;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
 /* Navbar */
 .navbar-brand {
@@ -64,7 +71,8 @@ p {
   margin-bottom: 1rem;
   margin-left: 2rem;
   margin-right: 2rem;
-  background-color: #ffffff1a;
+  /* background-color: #ffffff1a; */
+  background-color: #ffffff45;
   border-radius: 20px;
 }
 /* .home {
@@ -168,7 +176,13 @@ p {
   /* font-size: 1.2rem; */
   color: #656565eb;
 }
-
+.data-source p{
+  color: #ffffff;
+  font-size: small;
+  font-family: cursive;
+  margin-left: 2rem;
+  padding-top: 1rem;
+}
 /* Footer */
 #footer {
   margin-top: 2rem;
@@ -218,6 +232,9 @@ input {
     padding-top: 2rem;
     text-align: center;
   }
+  .data-source p{
+    text-align: center;
+  }
 }
 @media (max-width: 576px) {
   ul {
@@ -226,5 +243,8 @@ input {
   }
   #container-width {
     width: 95%;
+  }
+  .data-source p{
+    text-align: center;
   }
 }
