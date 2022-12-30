@@ -57,7 +57,7 @@ html {
 }
 /* Section*/
 section {
-  scroll-margin-top: 60px;
+  scroll-margin-top: 110px;
   min-height: 5em;
   padding: 60px 2%;
 }
@@ -234,6 +234,7 @@ input {
   }
   .data-source p{
     text-align: center;
+    margin-left: -2rem;
   }
 }
 @media (max-width: 576px) {
@@ -246,5 +247,6 @@ input {
   }
   .data-source p{
     text-align: center;
+    margin-left: -2rem;
   }
 }
