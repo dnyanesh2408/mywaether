@@ -73,7 +73,7 @@ p {
   margin-right: 2rem;
   /* background-color: #ffffff1a; */
   background-color: #ffffff45;
-  border-radius: 20px;
+  border-radius: 12px;
 }
 /* .home {
   background-color: var(--bs-light);
@@ -179,7 +179,7 @@ p {
 .data-source p{
   color: #ffffff;
   font-size: small;
-  font-family: cursive;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 2rem;
   padding-top: 1rem;
 }
@@ -234,7 +234,7 @@ input {
   }
   .data-source p{
     text-align: center;
-    margin-left: -2rem;
+    margin-left: 0;
   }
 }
 @media (max-width: 576px) {
@@ -247,6 +247,6 @@ input {
   }
   .data-source p{
     text-align: center;
-    margin-left: -2rem;
+    margin-left: 0;
   }
 }
